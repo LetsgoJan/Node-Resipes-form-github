@@ -4,7 +4,7 @@ const routes = require('./routes/routes');
 const app = express();
 const mongoose = require('mongoose');
 
-mongoose.connect('');
+mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
 routes(app);
